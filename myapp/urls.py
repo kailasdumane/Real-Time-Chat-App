@@ -5,3 +5,4 @@ from .views import hello
 urlpatterns = [
     path('hello/', hello, name='hello'),
 ]
+
