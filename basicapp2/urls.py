@@ -9,6 +9,8 @@ urlpatterns = [
     
     
     # core app
-    path('', include('core.urls'))
+    path('', include('core.urls')),
+    path('rooms/', include('room.urls'))
 
 ]
+

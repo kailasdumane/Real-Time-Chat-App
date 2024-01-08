@@ -16,10 +16,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-cye%s_i@fj8v!&+m7wo@wpe2hvq1t@^+_j^r8udx07ujz03b2k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+LOGOUT_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/rooms/'
+LOGIN_URL = '/login/'
 
 # Application definition
 
@@ -32,7 +35,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'myapp',
     # 'channels',
-    'core'
+    'core',
+    'room'
 ]
 
 MIDDLEWARE = [
