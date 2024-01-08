@@ -9,6 +9,14 @@
         <title>{% block title %}{% endblock %}DjangoChat</title>
 
         <script src="https://cdn.tailwindcss.com"></script>
+
+        <style>
+            .messages {
+                height: 400px;
+                overflow-y: auto;
+            }
+        </style>
+
     </head>
 
     <body class="bg-teal-600">
@@ -39,6 +47,10 @@
 
        {% block content %}
        {% endblock %}
+
+       {% block scripts %}
+       {% endblock %}
+
     </body>
     
 </html>

@@ -1,5 +1,6 @@
 
 from pathlib import Path
+from telnetlib import LOGOUT
 import os
 import django_heroku
 import dj_database_url
@@ -34,7 +35,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'myapp',
-    # 'channels',
+    'channels',
     'core',
     'room'
 ]
@@ -68,6 +69,14 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'basicapp2.wsgi.application'
+ASGI_APPLICATION = 'basicapp2.asgi.application'
+
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels.layers.InMemoryChannelLayer'
+    }
+}
+
 
 
 # Database
@@ -79,6 +88,7 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
 
 
 # Password validation
