@@ -6,12 +6,20 @@
 {% block content %}
 
 <div class="p-10 lg:p-20 text-center">
-    <h1 class="text-3xl lg:text-6xl text-white">
+    <!-- <h1 class="text-3xl lg:text-6xl text-white" > -->
+    <h1 style="text-align: left;" >
         Hello,<br>
         Welcome to<br>
-        <span style="color:orangered;">Chatify App</span>     
+        <span id="app-title" style="color:orangered; transition:font-size 0.3s;">Chatify App</span>     
     </h1>
 </div>
+
+<style>
+    #app-title:hover{
+        font-size: 1.2em;
+        font-weight: 850;
+    }
+</style>
 
 
 {% endblock %}
